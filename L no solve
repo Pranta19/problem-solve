@@ -1,0 +1,46 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main() {
+    int T;
+    cin >> T;
+
+    for (int t = 1; t <= T; t++) {
+        long long S;
+        cin >> S;
+
+        long long secondsInYear = 12LL * 30 * 24 * 60 * 60;
+        long long secondsInMonth = 30LL * 24 * 60 * 60;
+        long long secondsInDay = 24LL * 60 * 60;
+        long long secondsInHour = 60LL * 60;
+        long long secondsInMinute = 60LL;
+
+        long long years = S / secondsInYear;
+        S %= secondsInYear;
+
+        long long months = S / secondsInMonth;
+        S %= secondsInMonth;
+
+        long long days = S / secondsInDay;
+        S %= secondsInDay;
+
+        long long hours = S / secondsInHour;
+        S %= secondsInHour;
+
+        long long minutes = S / secondsInMinute;
+        S %= secondsInMinute;
+
+        long long seconds = S;
+
+        cout << "Case " << t << ": ";
+        if (years > 0) cout << years << (years == 1 ? " year " : " years ");
+        if (months > 0) cout << months << (months == 1 ? " month " : " months ");
+        if (days > 0) cout << days << (days == 1 ? " day " : " days ");
+        if (hours > 0) cout << hours << (hours == 1 ? " hour " : " hours ");
+        if (minutes > 0) cout << minutes << (minutes == 1 ? " minute " : " minutes ");
+        if (seconds > 0) cout << seconds << (seconds == 1 ? " second" : " seconds");
+        cout << endl;
+    }
+
+    return 0;
+}
