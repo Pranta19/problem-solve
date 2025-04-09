@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int T;
+    cin >> T;
+
+    for (int i = 1; i <= T; i++) {
+        int n1, n2, n3;
+        cin >> n1 >> n2 >> n3;
+
+        bool isAP = (n2 - n1 == n3 - n2);
+        bool isGP = (n1 != 0 && n2 != 0 && n2 / n1 == n3 / n2);
+
+        cout << "Case " << i << ": ";
+        if (isAP && isGP) {
+            cout << "Both" << endl;
+        } else if (isAP) {
+            cout << "Arithmetic Progression" << endl;
+        } else if (isGP) {
+            cout << "Geometric Progression" << endl;
+        } else {
+            cout << "None" << endl;
+        }
+    }
+
+    return 0;
+}
