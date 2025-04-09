@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int T;
+    cin >> T;
+
+    for (int i = 1; i <= T; i++) {
+        int B, H;
+        cin >> B >> H;
+        int result = B * H;
+        cout << "Case " << i << ": " << result << endl;
+    }
+
+    return 0;
+}
